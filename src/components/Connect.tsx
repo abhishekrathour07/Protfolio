@@ -45,8 +45,8 @@ const Connect: React.FC = () => {
     };
 
     return (
-        <div className="h-[70vh] md:h-[50vh] flex justify-center mt-12 mx-6 ">
-            <div className="bg-[#9694FF] md:w-[70vw] md:h-[45vh] lg:w-[60vw] items-center rounded-lg flex flex-col md:flex-row">
+        <div className="h-[80vh] md:h-[60vh] flex justify-center mt-12 mx-6 ">
+            <div className="bg-[#9694FF] md:w-[70vw] md:h-[55vh] lg:w-[60vw] items-center rounded-lg flex flex-col md:flex-row">
                 <div className="bg-[#231d1d] rounded-lg md:rounded-tr-3xl rounded-br-[4rem] h-44 md:h-full md:w-[40%] flex flex-col justify-center gap-2 p-7 text-white">
                     <h2 className="space-x-1 text-4xl">Contact</h2>
                     <p className="h-2 w-12 bg-slate-600 rounded-2xl mr-16"></p>

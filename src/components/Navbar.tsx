@@ -1,17 +1,24 @@
 import React, { useState } from "react";
 import Mode from "./Mode";
-import {  Menu, UserRound } from "lucide-react";
+import { Menu, UserRound, X } from "lucide-react";
 import { motion } from "framer-motion";
-import { fadeInDown } from "./Framer";
+import { fadeInDown, fadeInleft } from "./Framer";
 import AboutMe from "./AboutMe";
+import Projects from "./Projects";
+import { useNavigate } from "react-router-dom";
 
 const Navbar: React.FC = () => {
     const [isPopupVisible, setIsPopupVisible] = useState(false);
+    const [menuPopup, setMenuPopup] = useState(false);
 
     const togglePopup = () => {
         setIsPopupVisible(!isPopupVisible);
     };
 
+    const toggleMenuPopup = () => {
+        setMenuPopup(!menuPopup)
+    }
+    const navigate: any = useNavigate();
     return (
         <div className="text-white bg-[#16325B] h-20 relative w-full">
             <motion.div
@@ -36,8 +43,39 @@ const Navbar: React.FC = () => {
                         strokeWidth="16"
                     />
                 </motion.svg>
+                <Menu size={36} className="block md:hidden"
+                    onClick={toggleMenuPopup} />
+                {menuPopup && (
+                    <motion.div
+                        initial="hidden"
+                        whileInView="show"
+                        variants={fadeInleft()}
+                        viewport={{ once: true }}
+                        className="fixed top-40 left-0  w-full h-full flex justify-center z-50  "
+                        onClick={() => setMenuPopup(false)}>
+                        <div
+                            className=" bg-blue-950 rounded-lg p-4 shadow-lg w-[75vw] h-[30vh] "
+                            onClick={(e) => e.stopPropagation()} >
+                            <div className="flex h-12 items-center justify-end">
+                                <X size={36} strokeWidth={2.5}
+                                    className="text-white  hover:text-red-700 cursor-pointer"
+                                    onClick={() => setMenuPopup(false)}
+                                />
+                            </div>
+                            <motion.h2 className="text-white text-2xl font-serif  px-4 hover:bg-blue-900 w-full rounded-lg p-2">Home</motion.h2>
+                            <motion.h2 className="text-white text-2xl font-serif  px-4 hover:bg-blue-900 w-full rounded-lg p-2"
+                                onClick={togglePopup}>About Me {isPopupVisible && (
+                                    <AboutMe setIsPopupVisible={setIsPopupVisible} />
+                                )}
+                            </motion.h2>
+                            <motion.h2 className="text-white text-2xl font-serif  px-4 hover:bg-blue-900 w-full rounded-lg p-2"
+                                onClick={() => navigate('/projects')}>Projects
+                            </motion.h2>
 
-                <Menu size={32} className="block md:hidden" />
+
+                        </div>
+                    </motion.div>
+                )}
                 <motion.ul
                     variants={fadeInDown()}
                     className="md:flex gap-8 items-center hidden"
@@ -56,9 +94,9 @@ const Navbar: React.FC = () => {
                 </motion.ul>
             </motion.div>
 
-            
+
             {isPopupVisible && (
-                <AboutMe setIsPopupVisible={setIsPopupVisible}/>
+                <AboutMe setIsPopupVisible={setIsPopupVisible} />
             )}
         </div>
     );
