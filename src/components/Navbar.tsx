@@ -4,7 +4,6 @@ import { Menu, UserRound, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeInDown, fadeInleft } from "./Framer";
 import AboutMe from "./AboutMe";
-import Projects from "./Projects";
 import { useNavigate } from "react-router-dom";
 
 const Navbar: React.FC = () => {
@@ -43,7 +42,7 @@ const Navbar: React.FC = () => {
                         strokeWidth="16"
                     />
                 </motion.svg>
-                <Menu size={36} className="block md:hidden"
+                <Menu size={36} className="block md:hidden cursor-pointer"
                     onClick={toggleMenuPopup} />
                 {menuPopup && (
                     <motion.div
@@ -51,10 +50,10 @@ const Navbar: React.FC = () => {
                         whileInView="show"
                         variants={fadeInleft()}
                         viewport={{ once: true }}
-                        className="fixed top-40 left-0  w-full h-full flex justify-center z-50  "
+                        className="fixed top-40 left-0  w-full h-auto flex justify-center z-50 "
                         onClick={() => setMenuPopup(false)}>
                         <div
-                            className=" bg-blue-950 rounded-lg p-4 shadow-lg w-[75vw] h-[30vh] "
+                            className=" bg-blue-950 rounded-lg p-4 shadow-lg w-[75vw] h-auto py-6 "
                             onClick={(e) => e.stopPropagation()} >
                             <div className="flex h-12 items-center justify-end">
                                 <X size={36} strokeWidth={2.5}
@@ -62,14 +61,20 @@ const Navbar: React.FC = () => {
                                     onClick={() => setMenuPopup(false)}
                                 />
                             </div>
-                            <motion.h2 className="text-white text-2xl font-serif  px-4 hover:bg-blue-900 w-full rounded-lg p-2">Home</motion.h2>
-                            <motion.h2 className="text-white text-2xl font-serif  px-4 hover:bg-blue-900 w-full rounded-lg p-2"
+                            <motion.h2 className="text-white text-xl font-sans px-4 hover:bg-blue-900 w-full rounded-lg p-2" onClick={navigate('/')}>Home</motion.h2>
+                            <motion.h2 className="text-white text-xl font-sans  px-4 hover:bg-blue-900 w-full rounded-lg p-2"
                                 onClick={togglePopup}>About Me {isPopupVisible && (
                                     <AboutMe setIsPopupVisible={setIsPopupVisible} />
                                 )}
                             </motion.h2>
-                            <motion.h2 className="text-white text-2xl font-serif  px-4 hover:bg-blue-900 w-full rounded-lg p-2"
+                            <motion.h2 className="text-white text-xl font-sans  px-4 hover:bg-blue-900 w-full rounded-lg p-2"
+                                onClick={() => navigate('/skills')}>Skills
+                            </motion.h2>
+                            <motion.h2 className="text-white text-xl font-sans  px-4 hover:bg-blue-900 w-full rounded-lg p-2"
                                 onClick={() => navigate('/projects')}>Projects
+                            </motion.h2>
+                            <motion.h2 className="text-white text-xl font-sans  px-4 hover:bg-blue-900 w-full rounded-lg p-2"
+                                onClick={() => navigate('/feedback')}>Feedback
                             </motion.h2>
 
 

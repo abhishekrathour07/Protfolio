@@ -1,12 +1,36 @@
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
-import { BrowserRouter } from 'react-router-dom'
-import { Toaster } from 'sonner'
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import App from './App.tsx';
+import { BrowserRouter } from 'react-router-dom';
+import { Toaster } from 'sonner';
+import React, { useEffect } from 'react';
+
+// Component to handle dynamic title changes
+const DynamicTitleHandler: React.FC = () => {
+    useEffect(() => {
+        const handleVisibilityChange = () => {
+            if (document.hidden) {
+                document.title = "Come back soon! 😊";
+            } else {
+                document.title = "Abhishek Singh - Protfolio";
+            }
+        };
+
+        document.addEventListener("visibilitychange", handleVisibilityChange);
+
+        // Cleanup event listener on unmount
+        return () => {
+            document.removeEventListener("visibilitychange", handleVisibilityChange);
+        };
+    }, []);
+
+    return null; // No UI rendering, just logic
+};
 
 createRoot(document.getElementById('root')!).render(
-  <BrowserRouter >
-    <App />
-   <Toaster/>
-  </BrowserRouter>,
-)
+    <BrowserRouter>
+        <DynamicTitleHandler />
+        <App />
+        <Toaster />
+    </BrowserRouter>
+);
