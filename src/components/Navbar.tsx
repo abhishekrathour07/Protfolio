@@ -61,21 +61,52 @@ const Navbar: React.FC = () => {
                                     onClick={() => setMenuPopup(false)}
                                 />
                             </div>
-                            <motion.h2 className="text-white text-xl font-sans px-4 hover:bg-blue-900 w-full rounded-lg p-2 cursor-pointer" onClick={()=>navigate('/')}>Home</motion.h2>
-                            <motion.h2 className="text-white text-xl font-sans  px-4 hover:bg-blue-900 w-full rounded-lg p-2 cursor-pointer"
-                                onClick={togglePopup}>About Me {isPopupVisible && (
-                                    <AboutMe setIsPopupVisible={setIsPopupVisible} />
-                                )}
+                            <motion.h2
+                                className="text-white text-xl font-sans px-4 hover:bg-blue-900 w-full rounded-lg p-2 cursor-pointer"
+                                onClick={() => {
+                                    setMenuPopup(false); // Close the popup first
+                                    navigate('/'); // Then navigate
+                                }}
+                            >
+                                Home
                             </motion.h2>
-                            <motion.h2 className="text-white text-xl font-sans  px-4 hover:bg-blue-900 w-full rounded-lg p-2 cursor-pointer"
-                                onClick={() => navigate('/skills')}>Skills
+                            <motion.h2
+                                className="text-white text-xl font-sans px-4 hover:bg-blue-900 w-full rounded-lg p-2 cursor-pointer"
+                                onClick={() => {
+                                    setMenuPopup(false); 
+                                    togglePopup(); 
+                                }}
+                            >
+                                About Me
                             </motion.h2>
-                            <motion.h2 className="text-white text-xl font-sans  px-4 hover:bg-blue-900 w-full rounded-lg p-2 cursor-pointer"
-                                onClick={() => navigate('/projects')}>Projects
+                            <motion.h2
+                                className="text-white text-xl font-sans px-4 hover:bg-blue-900 w-full rounded-lg p-2 cursor-pointer"
+                                onClick={() => {
+                                    setMenuPopup(false);
+                                    navigate('/skills'); 
+                                }}
+                            >
+                                Skills
                             </motion.h2>
-                            <motion.h2 className="text-white text-xl font-sans  px-4 hover:bg-blue-900 w-full rounded-lg p-2 cursor-pointer"
-                                onClick={() => navigate('/feedback')}>Feedback
+                            <motion.h2
+                                className="text-white text-xl font-sans px-4 hover:bg-blue-900 w-full rounded-lg p-2 cursor-pointer"
+                                onClick={() => {
+                                    setMenuPopup(false); 
+                                    navigate('/projects'); 
+                                }}
+                            >
+                                Projects
                             </motion.h2>
+                            <motion.h2
+                                className="text-white text-xl font-sans px-4 hover:bg-blue-900 w-full rounded-lg p-2 cursor-pointer"
+                                onClick={() => {
+                                    setMenuPopup(false); 
+                                    navigate('/feedback'); 
+                                }}
+                            >
+                                Feedback
+                            </motion.h2>
+
 
 
                         </div>

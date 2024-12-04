@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
 import HeroSection from '../components/HeroSection'
 import HoverDevCards from '../components/SkillsCards'
 import Projects from '../components/Projects'
@@ -8,7 +7,6 @@ import Connect from '../components/Connect'
 const Protfolio: React.FC = () => {
     return (
         <div className="bg-cover bg-center bg-[url('/images/background.png')] overflow-hidden">
-            <Navbar />
             <HeroSection />
             <HoverDevCards />
             <Projects />

@@ -4,6 +4,7 @@ import App from './App.tsx';
 import { BrowserRouter } from 'react-router-dom';
 import { Toaster } from 'sonner';
 import React, { useEffect } from 'react';
+import Navbar from './components/Navbar.tsx';
 
 // Component to handle dynamic title changes
 const DynamicTitleHandler: React.FC = () => {
@@ -30,6 +31,7 @@ const DynamicTitleHandler: React.FC = () => {
 createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
         <DynamicTitleHandler />
+        <Navbar/>
         <App />
         <Toaster />
     </BrowserRouter>
