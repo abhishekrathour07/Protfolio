@@ -34,7 +34,7 @@ const AboutMe: React.FC<Props> = ({ setIsPopupVisible }) => {
             className="fixed top-8 left-0 w-full h-full flex justify-center items-center z-50  "
             onClick={() => setIsPopupVisible(false)}>
             <div
-                className="bg-white bg-cover bg-[url('/images/background.png')] rounded-lg p-6 shadow-lg w-[75vw] h-[75vh]"
+                className="bg-white bg-cover bg-[url('/images/background.png')] rounded-lg p-6 shadow-lg w-[75vw] h-auto"
                 onClick={(e) => e.stopPropagation()} >
                 <div className="flex h-12 items-center justify-between">
                     <motion.h2 variants={fadeInleft()} className="text-[#161D6F] text-2xl md:text-4xl lg:text-5xl font-serif font-bold">{aboutData.title}</motion.h2>
