@@ -34,7 +34,6 @@ createRoot(document.getElementById('root')!).render(
         <Navbar/>
         <div className="bg-[url('images/background.png')]">
         <App/>
-
         </div>
         <Toaster />
     </BrowserRouter>
