@@ -95,7 +95,7 @@ const Projects = () => {
             shadowColor: "bg-[#1788ae]",
         },
         {
-            title: "CodingNotes",
+            title: "Programmer Point",
             subtitle: "Platform for learning",
             description:
                 "CodingNotes is an interactive platform designed to help developers and learners enhance their coding skills. It features well-structured tutorials, code snippets, and problem-solving exercises, making it a one-stop solution for mastering programming concepts.",
@@ -113,6 +113,28 @@ const Projects = () => {
             image: "/images/codingNotes.png",
             bgColor: "bg-[#AF1740]",
             textColor: "text-[#AF1740]",
+            shadowColor: "bg-[#1788ae]",
+        },
+        {
+            title: "Quick Meal",
+            subtitle: "Food delivery platform which deliver food",
+            description:
+                "Quick Meal is a feature-rich food delivery app designed to provide users with a seamless and efficient experience.The main goal of Quick Meal is to provide homemade-like food within 30 minutes. Our priority is customer health and taste.",
+            skills: [
+                "#react.js",
+                "#Shadcn ui",
+                "#Tailwindcss",
+                "TypeScript",
+                "#javascript",
+                "#express",
+                '#jsonWebTOken',
+                "#mongoDB",
+                "#components"
+            ],
+            link: "https://coding-notes.vercel.app/",
+            image: "/images/food-delivery-website.png",
+            bgColor: "bg-[#AF1740]",
+            textColor: "text-orange-600",
             shadowColor: "bg-[#1788ae]",
         },
 

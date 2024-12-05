@@ -10,7 +10,7 @@ type Props = {
 const AboutMe: React.FC<Props> = ({ setIsPopupVisible }) => {
     const aboutData = {
         title: "About Me",
-        img: "/images/abhishek.png",
+        img: "/images/myimg.jpeg",
         description: "I am Abhishek Singh from  Varansi , I am a BCA student and aspiring web developer, passionate about creating impactful applications. ",
         subtitle: "Language's I Love to work with",
         skills: [

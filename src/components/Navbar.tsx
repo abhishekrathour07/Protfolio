@@ -101,12 +101,11 @@ const Navbar: React.FC = () => {
                                 className="text-white text-xl font-sans px-4 hover:bg-blue-900 w-full rounded-lg p-2 cursor-pointer"
                                 onClick={() => {
                                     setMenuPopup(false); 
-                                    navigate('/feedback'); 
+                                    navigate('/feedback'); // 
                                 }}
                             >
                                 Feedback
                             </motion.h2>
-
 
 
                         </div>
