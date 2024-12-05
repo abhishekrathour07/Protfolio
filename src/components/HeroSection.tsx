@@ -116,7 +116,7 @@ const HeroSection: React.FC = () => {
                         Abhishek Singh
                     </h1>
                     <h2 className="text-lg md:text-2xl font-light text-gray-300 mt-2 md:mt-4 tracking-widest">
-                        Frontend Developer
+                        Web Developer
                     </h2>
                 </motion.div>
             </motion.div>
@@ -130,7 +130,7 @@ const HeroSection: React.FC = () => {
             >
                 {[{ icon: <Linkedin />, url: "https://www.linkedin.com/in/abhishek-rathour07/" },
                 { icon: <Github />, url: "https://github.com/abhishekrathour07" },
-                { icon: <Instagram />, url: "#" },
+                { icon: <Instagram />, url: "https://www.instagram.com/abhishek_rathour.07/profilecard/?igsh=MWV1dndhcXBhc215Nw==" },
                 { icon: <Mail />, url: "mailto:singhrathourabhishek7@gmail.com" },
                 { icon: <Twitter />, url: "https://x.com/AbhiRathour_07" }].map((social, index) => (
                     <motion.li
