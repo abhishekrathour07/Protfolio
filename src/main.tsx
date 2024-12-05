@@ -29,10 +29,13 @@ const DynamicTitleHandler: React.FC = () => {
 };
 
 createRoot(document.getElementById('root')!).render(
-    <BrowserRouter>
+    <BrowserRouter >
         <DynamicTitleHandler />
         <Navbar/>
-        <App />
+        <div className="bg-[url('images/background.png')]">
+        <App/>
+
+        </div>
         <Toaster />
     </BrowserRouter>
 );
