@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
-            className="relative h-screen flex flex-col justify-center items-center overflow-hidden bg-gradient-to-br from-[#1e3a8a] via-[#4f46e5] to-[#9333ea] px-4"
+            className="relative h-screen flex flex-col justify-center items-center overflow-hidden  dark:bg-black px-4"
         >
             {/* Rotating Circle with SVG */}
             <motion.div
@@ -112,10 +112,10 @@ const HeroSection: React.FC = () => {
                     transition={{ duration: 1, ease: "easeInOut" }}
                     className="mt-4 md:mt-6"
                 >
-                    <h1 className="text-4xl md:text-6xl font-extrabold text-white neon-text drop-shadow-md tracking-wide">
+                    <h1 className="text-4xl md:text-6xl font-extrabold dark:text-white neon-text drop-shadow-md tracking-wide">
                         Abhishek Singh
                     </h1>
-                    <h2 className="text-lg md:text-2xl font-light text-gray-300 mt-2 md:mt-4 tracking-widest">
+                    <h2 className="text-lg md:text-2xl font-light dark:text-gray-300 mt-2 md:mt-4 tracking-widest">
                         Web Developer
                     </h2>
                 </motion.div>
@@ -123,7 +123,7 @@ const HeroSection: React.FC = () => {
 
             {/* Social Media Links */}
             <motion.ul
-                className="mt-6 md:mt-10 flex gap-4 md:gap-6 z-10"
+                className="mt-6 dark:text-white md:mt-10 flex gap-4 md:gap-6 z-10"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 1 }}

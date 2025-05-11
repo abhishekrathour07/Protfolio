@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
     }
     const navigate: any = useNavigate();
     return (
-        <div className="text-white bg-[#16325B] h-20 relative w-full">
+        <div className="text-white bg-gradient-to-r from-blue-700 to-purple-700 h-18 relative w-full">
             <motion.div
                 variants={fadeInDown()}
                 initial={"hidden"}

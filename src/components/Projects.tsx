@@ -73,9 +73,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 const Projects = () => {
     const projectData = [
         {
-            title: "Stamper.AI",
-            subtitle: "Employee Management Platform",
-            description: "Stamper.AI is a comprehensive employee management dashboard that streamlines attendance tracking, news updates, time-off management, task organization (TODO list), and geofencing capabilities, enhancing workplace efficiency and collaboration.",
+            title: "Yaario",
+            subtitle: "Social Media Platform",
+            description: "Yaario is a full-stack social media platform I am building with features like login/signup, post sharing, likes/dislikes, stories visible to friends, real-time chat, friend requests, saved posts, and profile editing. It is built using React, Tailwind, Zustand, Node.js, Express, and MongoDB, with secure JWT auth, Cloudinary for media, and modular backend design.",
             skills: [
                 "#Next.js",
                 "#express.js",
@@ -88,31 +88,33 @@ const Projects = () => {
                 "#javascript",
                 "#figma",
             ],
-            link: "https://stamper.tech",
-            image: "/images/stamper.png",
+            link: "https://yaario-social-media-frontend.vercel.app",
+            image: "/images/yaario-img.png",
             bgColor: "bg-[#15B392]",
-            textColor: "text-[#73EC8B]",
+            textColor: "text-[#D50B8B]",
             shadowColor: "bg-[#1788ae]",
         },
         {
-            title: "Programmer Point",
-            subtitle: "Platform for learning",
-            description:
-                "CodingNotes is an interactive platform designed to help developers and learners enhance their coding skills. It features well-structured tutorials, code snippets, and problem-solving exercises, making it a one-stop solution for mastering programming concepts.",
+            title: "Job Vista",
+            subtitle: "Job Seeking platform for user and admin",
+            description: "Job Vista is a college placement platform with student and admin panels. Students can upload resumes, search and filter jobs by category, location, or type, and apply for jobs. Admins can post jobs with image upload (Cloudinary), manage applications, and download applicant lists as CSV. Built using Next.js, Node.js, Express, MongoDB, and integrated with Nodemailer for email notifications.",
             skills: [
                 "#Next.js",
-                "#Shadcn ui",
-                "#Acertinity ui",
-                "#Tailwindcss",
+                "#express.js",
+                "#Acertinity UI",
+                "#node.js",
                 "TypeScript",
+                "#mongoDB",
+                "#mongoose",
+                "#Tailwindcss",
+                "RestApi",
                 "#javascript",
                 "#figma",
-                "#components"
             ],
-            link: "https://coding-notes.vercel.app/",
-            image: "/images/codingNotes.png",
-            bgColor: "bg-[#AF1740]",
-            textColor: "text-[#AF1740]",
+            link: "https://job-vista-frontend.vercel.app/login",
+            image: "/images/jobVista.png",
+            bgColor: "bg-[#15B392]",
+            textColor: "text-[#1DCD9F]",
             shadowColor: "bg-[#1788ae]",
         },
         {
@@ -137,6 +139,28 @@ const Projects = () => {
             textColor: "text-orange-600",
             shadowColor: "bg-[#1788ae]",
         },
+        {
+            title: "Programmer Point",
+            subtitle: "Platform for learning",
+            description:
+                "CodingNotes is an interactive platform designed to help developers and learners enhance their coding skills. It features well-structured tutorials, code snippets, and problem-solving exercises, making it a one-stop solution for mastering programming concepts.",
+            skills: [
+                "#Next.js",
+                "#Shadcn ui",
+                "#Acertinity ui",
+                "#Tailwindcss",
+                "TypeScript",
+                "#javascript",
+                "#figma",
+                "#components"
+            ],
+            link: "https://coding-notes.vercel.app/",
+            image: "/images/codingNotes.png",
+            bgColor: "bg-[#AF1740]",
+            textColor: "text-[#003092]",
+            shadowColor: "bg-[#1788ae]",
+        },
+
 
     ];
 
