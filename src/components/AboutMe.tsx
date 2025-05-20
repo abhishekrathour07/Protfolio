@@ -27,13 +27,6 @@ const AboutMe: React.FC<Props> = ({ setIsPopupVisible }) => {
         cvPath: "/downloads//downloads/test.pdf",
     };
 
-    const downloadCV = () => {
-        const link = document.createElement("a");
-        link.href = aboutData.cvPath;
-        link.download = "test.pdf";
-        link.click();
-    };
-
     return (
         <motion.div
             initial="hidden"
@@ -83,10 +76,9 @@ const AboutMe: React.FC<Props> = ({ setIsPopupVisible }) => {
                             ))}
                         </ul>
                         <button
-                            onClick={downloadCV}
                             className="mt-4 bg-[#161D6F] hover:bg-[#68ad73] text-white font-bold py-2 px-4 rounded"
                         >
-                            Download CV
+                            <a href="https://drive.google.com/file/d/1HFCVcY_vmbOvxPFVPeGm9NfPrcN_B_0_/view?usp=sharing">Download CV</a>
                         </button>
                     </div>
                 </motion.div>
