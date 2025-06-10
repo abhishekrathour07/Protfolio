@@ -78,7 +78,7 @@ const AboutMe: React.FC<Props> = ({ setIsPopupVisible }) => {
                         <button
                             className="mt-4 bg-[#161D6F] hover:bg-[#68ad73] text-white font-bold py-2 px-4 rounded"
                         >
-                            <a href="https://drive.google.com/file/d/1MHuqC1QhGsqwxSVsNyQa9deeKXKvmdn1/view">Download CV</a>
+                            <a href="https://drive.google.com/file/d/15RPtMCVraZ3qU7C2NfNutnbWhyLk4q4e/view?usp=drive_link">Download CV</a>
                         </button>
                     </div>
                 </motion.div>

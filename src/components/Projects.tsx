@@ -133,7 +133,7 @@ const Projects = () => {
                 "#mongoDB",
                 "#components"
             ],
-            link: "https://coding-notes.vercel.app/",
+            link: "https://github.com/abhishekrathour07/Quick-Meal-website",
             image: "/images/food-delivery-website.png",
             bgColor: "bg-[#AF1740]",
             textColor: "text-orange-600",
