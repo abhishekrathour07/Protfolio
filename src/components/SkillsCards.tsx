@@ -76,7 +76,7 @@ const HoverDevCards: React.FC = () => {
             to: "#E94E31",
             Icon: () => (
                 <img
-                     src="/images/git.png"
+                    src="/images/git.png"
                     alt="Git Icon"
                     className="h-12 w-12"
                 />
@@ -115,7 +115,7 @@ const HoverDevCards: React.FC = () => {
             to: "#6439FF",
             Icon: () => (
                 <img
-                    src="https://w7.pngwing.com/pngs/212/722/png-transparent-web-development-express-js-javascript-software-framework-laravel-world-wide-web-purple-blue-text.png"
+                    src="https://skillicons.dev/icons?i=express"
                     alt="Express.js Icon"
                     className="h-10 rounded-lg"
                 />
@@ -141,9 +141,9 @@ const HoverDevCards: React.FC = () => {
             to: "#640D5F",
             Icon: () => (
                 <img
-                    src="https://img.icons8.com/fluent-systems-filled/200/FFFFFF/nextjs.png"
-                    alt="next icon"
-                    className="h-12 w-12"
+                src="https://img.icons8.com/fluent-systems-filled/200/FFFFFF/nextjs.png"
+                alt="next icon"
+                className="h-12 w-12"
                 />
             ),
         },
@@ -151,37 +151,76 @@ const HoverDevCards: React.FC = () => {
             title: "Python",
             subtitle: "Most Used Programming Language",
             from: "#FAB12F",
+            to: "#5409DA",
+            Icon: () => (
+                <img
+                src="/images/python1.png"
+                alt="python"
+                className="h-12 w-12"
+                />
+            ),
+        },
+        {
+            title: "Figma",
+            subtitle: "powerful design features",
+            from: "#614321",
             to: "#F3C623",
             Icon: () => (
                 <img
-                    src="/images/python1.png"
-                    alt="python"
+                src="https://skillicons.dev/icons?i=figma"
+                alt="figma"
+                className="h-12 w-12"
+                />
+            ),
+        },
+        {
+            title: "Vercel",
+            subtitle: "Project deployment Hub",
+            from: "#901E3E",
+            to: "#FF9898",
+            Icon: () => (
+                <img
+                    src="https://skillicons.dev/icons?i=vercel"
+                    alt="MongoDB Icon"
+                    className="h-12 w-12"
+                />
+            ),
+        },
+        {
+            title: "AWS",
+            subtitle: "Cloud services",
+            from: "#F7AD45",
+            to: "#222831",
+            Icon: () => (
+                <img
+                    src="https://skillicons.dev/icons?i=aws"
+                    alt="MongoDB Icon"
                     className="h-12 w-12"
                 />
             ),
         },
     ];
-    
+
 
     return (
         <motion.div
             initial={"hidden"}
             whileInView={"show"}
             variants={fadeInDown()}
-            viewport={{ once: false }} 
+            viewport={{ once: false }}
             className="p-4 "
         >
             <motion.p
                 variants={fadeInDown()}
                 className="text-6xl font-bold  flex justify-center items-center h-20"
             >
-               Skills
+                Skills
             </motion.p>
             <motion.p
                 variants={fadeInDown()}
                 className="text-xl font-bold text-slate-400 flex justify-center items-center h-12 my-3"
             >
-               These are the various Skills i am familier with
+                These are the various Skills i am familier with
             </motion.p>
             <motion.div
                 variants={fadeInDown()}
@@ -193,8 +232,8 @@ const HoverDevCards: React.FC = () => {
                         title={language.title}
                         subtitle={language.subtitle}
                         Icon={language.Icon}
-                        from={language.from} 
-                        to={language.to}  
+                        from={language.from}
+                        to={language.to}
                     />
                 ))}
             </motion.div>
@@ -206,15 +245,15 @@ type LanguageProps = {
     title: string;
     subtitle: string;
     Icon: React.FC;
-    from: string; 
-    to: string;   
+    from: string;
+    to: string;
 };
 
 const Card: React.FC<LanguageProps> = ({ title, subtitle, Icon, from, to }) => {
     return (
         <motion.div
             variants={fadeInDown()}
-            whileTap={{scale:0.9 }}
+            whileTap={{ scale: 0.9 }}
             className="w-full p-4 rounded-xl border-[1px] border-gray-300 relative overflow-hidden group bg-black"
         >
             {/* Hover Gradient Animation */}
